@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .invoice-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .invoice-header h1 {
+            margin: 0;
+            font-size: 24px;
+            color: #673ab7;
+        }
+
+        .invoice-details {
+            width: 100%;
+            margin-bottom: 20px;
+            border-collapse: collapse;
+        }
+
+        .invoice-details th,
+        .invoice-details td {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .invoice-details th {
+            background-color: #673ab7;
+            color: #fff;
+            text-align: left;
+        }
+
+        .invoice-details td:last-child {
+            text-align: right;
+        }
+
+        .footer {
+            margin-top: 20px;
+            text-align: center;
+            color: #757575;
+        }
+
+        .footer p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="invoice-header">
+            <h1>INVOICE</h1>
+        </div>
+        <table class="invoice-details">
+            <thead>
+                <tr>
+                    <th colspan="2">COMPANY DETAILS</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Company Name:</td>
+                    <td>Gas Utility Services</td>
+                </tr>
+                <tr>
+                    <td>Address:</td>
+                    <td>123 Street Address, City, Country, Postal</td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="invoice-details">
+            <thead>
+                <tr>
+                    <th>BILL TO:</th>
+                    <th>INVOICE #</th>
+                    <th>DATE</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        {{ user_details.full_name }}<br>
+                        {{ user_details.email }}<br>
+                        {{ user_details.phone }}
+                    </td>
+                    <td>000001</td>
+                    <td>{{ service_request.submitted_at|date }}</td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="invoice-details">
+            <thead>
+                <tr>
+                    <th>QUANTITY</th>
+                    <th>ITEMS</th>
+                    <th>DESCRIPTION</th>
+                    <th>PRICE</th>
+                    <th>TAX</th>
+                    <th>AMOUNT</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Service Request</td>
+                    <td>{{ service_request.details }}</td>
+                    <td>$50.00</td>
+                    <td>18%</td>
+                    <td>$59.00</td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="footer">
+            Thank you for your business!<br>
+            If you have any questions about this invoice, please contact [Name, Phone, Email Address]
+        </p>
+    </div>
+</body>
+</html>
