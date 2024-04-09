@@ -14,7 +14,7 @@ The Gas Utility Services Web Application is a platform that allows users to rais
 1. Clone the repository:
 
 ```
-git clone https://github.com/tanujgupta18/gas-utility-services.git
+git clone https://github.com/tanujgupta18/Gas-Utility-Services.git
 ```
 
 2. Run the development server:
