@@ -1,6 +1,6 @@
 # Gas Utility Services
 
-The Gas Utility Services Web Application is a platform that allows users to raise complaints related to gas utility services and track the status of their complaints. Users are required to register or login to access the complaint submission and tracking functionalities.
+The Gas Utility Services Web Application is a platform that allows users to raise complaints related to gas utility services, track the status of their complaints, and pay charges by generating an invoice. Users are required to register or login to access the complaint submission, tracking, and payment functionalities.
 
 ## Features
 
